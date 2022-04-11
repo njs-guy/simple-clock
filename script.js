@@ -1,11 +1,12 @@
 // Sets the clock displayed on screen
 
+let twelveHrClock = true;
+
 // Main function to set time
 function setClock(){
 	 const clock = document.getElementById("clock");
 	 const clockText = document.getElementById("clock-text");
 
-	 let twelveHrClock = true;
 	 let currentTime = new Date();
 	 let currentHour = currentTime.getHours();
 	 let currentMinute = currentTime.getMinutes();
@@ -26,7 +27,7 @@ function setClock(){
 
 // Creates leading zeroes (ex: 14:05:07)
 function leadingZero(x){
-	if(x>=0 && x<=10){
+	if(x>=0 && x<=9){
 		x = "0" + String(x);
 		return x;
 	} else {
@@ -36,7 +37,6 @@ function leadingZero(x){
 
 // Creates the text that displays the time (ex: 00:00:00)
 function createClockOutput(tArr){
-	console.log(tArr.join(":"));
 	return tArr.join(":");
 }
 
@@ -55,6 +55,18 @@ function convertTo12Hr(tArr) {
 	}
 
 	return output;
+}
+
+function  changeClockType(){
+	console.log("change clock type");
+
+	if(twelveHrClock){
+		twelveHrClock = false;
+	} else {
+		twelveHrClock = true;
+	}
+
+	setClock();
 }
 
 setClock(); // sets clock as soon as the page loads

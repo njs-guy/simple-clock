@@ -10,9 +10,13 @@
 	<div id="clock">
 		<h1 id="clock-text"><h1>
 	</div>
-	<div id="12-24-radio">
+	<form id="clock-type-radio">
+		<input type="radio" id="twelve-hour" name="clock-type" value="twelveHour" onchange="changeClockType()" checked>
+		<label for="twelve-hour">AM/PM</label>
 
-	</div>
+		<input type="radio" id="twenty-four-hour" name="clock-type" value="twentyFourHour" onchange="changeClockType()">
+		<label for="twenty-four-hour">24 hour</label>
+	</form>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

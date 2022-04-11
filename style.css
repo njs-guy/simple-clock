@@ -4,4 +4,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}	
+}
+
+#clock-type-radio {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
